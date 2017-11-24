@@ -6,7 +6,7 @@
     <f7-statusbar></f7-statusbar>
 
     <!-- Left Panel -->
-    <!-- <f7-panel left reveal layout="dark">
+    <f7-panel left reveal layout="dark">
       <f7-view id="left-panel-view" navbar-through :dynamic-navbar="true">
         <f7-navbar v-if="$theme.ios" title="Left Panel" sliding></f7-navbar>
         <f7-pages>
@@ -28,7 +28,7 @@
           </f7-page>
         </f7-pages>
       </f7-view>
-    </f7-panel> -->
+    </f7-panel>
 
     <!-- Right Panel -->
     <!-- <f7-panel right cover layout="dark">
@@ -60,10 +60,10 @@
       <f7-view id="main-view" navbar-through :dynamic-navbar="true" main>
         <!-- iOS Theme Navbar -->
         <f7-navbar v-if="$theme.ios">
-          <!-- <f7-nav-left>
+          <f7-nav-left>
             <f7-link icon="icon-bars" open-panel="left"></f7-link>
-          </f7-nav-left> -->
-          <f7-nav-left sliding>&nbsp;&nbsp; Admin yim</f7-nav-left>
+          </f7-nav-left>
+          <f7-nav-center sliding>Admin yim</f7-nav-center>
           <f7-nav-right>
             <f7-link href="/about/"><f7-icon f7="info"></f7-icon></f7-link>
           </f7-nav-right>
@@ -73,10 +73,10 @@
           <f7-page>
             <!-- Material Theme Navbar -->
             <f7-navbar v-if="$theme.material">
-              <!-- <f7-nav-left>
+              <f7-nav-left>
                 <f7-link icon="icon-bars" open-panel="left"></f7-link>
-              </f7-nav-left> -->
-              <f7-nav-left sliding>&nbsp;&nbsp; Admin yim</f7-nav-left>
+              </f7-nav-left>
+              <f7-nav-center sliding>Admin yim</f7-nav-center>
               <f7-nav-right>
                 <f7-link href="/about/"><f7-icon material="info"></f7-icon></f7-link>
               </f7-nav-right>
