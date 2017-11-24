@@ -6,7 +6,7 @@
     <f7-statusbar></f7-statusbar>
 
     <!-- Left Panel -->
-    <f7-panel left reveal layout="dark">
+    <!-- <f7-panel left reveal layout="dark">
       <f7-view id="left-panel-view" navbar-through :dynamic-navbar="true">
         <f7-navbar v-if="$theme.ios" title="Left Panel" sliding></f7-navbar>
         <f7-pages>
@@ -28,10 +28,10 @@
           </f7-page>
         </f7-pages>
       </f7-view>
-    </f7-panel>
+    </f7-panel> -->
 
     <!-- Right Panel -->
-    <f7-panel right cover layout="dark">
+    <!-- <f7-panel right cover layout="dark">
       <f7-view id="right-panel-view" navbar-through :dynamic-navbar="true">
         <f7-navbar v-if="$theme.ios" title="Right Panel" sliding></f7-navbar>
         <f7-pages>
@@ -53,7 +53,7 @@
           </f7-page>
         </f7-pages>
       </f7-view>
-    </f7-panel>
+    </f7-panel> -->
 
     <!-- Main Views -->
     <f7-views>
@@ -120,7 +120,7 @@
     </f7-views>
 
     <!-- Popup -->
-    <f7-popup id="popup">
+    <!-- <f7-popup id="popup">
       <f7-view navbar-fixed>
         <f7-pages>
           <f7-page>
@@ -133,10 +133,10 @@
           </f7-page>
         </f7-pages>
       </f7-view>
-    </f7-popup>
+    </f7-popup> -->
 
     <!-- Login Screen -->
-    <f7-login-screen id="login-screen">
+    <!-- <f7-login-screen id="login-screen">
       <f7-view>
         <f7-pages>
           <f7-page login-screen>
@@ -160,7 +160,7 @@
           </f7-page>
         </f7-pages>
       </f7-view>
-    </f7-login-screen>
+    </f7-login-screen> -->
 
   </div>
 </template>

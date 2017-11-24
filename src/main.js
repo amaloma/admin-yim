@@ -2,7 +2,7 @@
 import Vue from 'vue'
 
 // Import F7
-import Framework7 from 'framework7'
+// import Framework7 from 'framework7'
 
 // Import F7 Vue Plugin
 import Framework7Vue from 'framework7-vue'
@@ -35,7 +35,7 @@ new Vue({
   framework7: {
     root: '#app',
     /* Uncomment to enable Material theme: */
-    // material: true,
+    material: !Framework7.prototype.device.ios,
     animateNavBackIcon: true,
     routes: Routes,  
   },
