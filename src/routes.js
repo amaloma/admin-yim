@@ -1,3 +1,5 @@
+import DynamicRoute from './pages/dynamic-route.vue';
+
 export default [
   {
       path: '/about/',
@@ -9,6 +11,6 @@ export default [
   },
   {
       path: '/dynamic-route/blog/:blogId/post/:postId/',
-      component: require('./pages/dynamic-route.vue')
+      component: DynamicRoute
   }
 ]
