@@ -40,3 +40,5 @@ jspm_packages
 node_modules/
 dist/
 npm-debug.log
+
+src/firebase/config.js
