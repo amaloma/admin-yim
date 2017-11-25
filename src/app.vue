@@ -14,7 +14,7 @@
             <f7-navbar v-if="$theme.material" title="Catalog" sliding></f7-navbar>   
 
             <f7-list >
-              <f7-list-item v-for="item in catalogs" :key="item.id" :link="item.link+item.id" :title="item.name" link-view="#main-view" link-close-panel></f7-list-item>
+              <f7-list-item v-for="item in getCatalogs" :key="item.id" :link="item.link" :title="item.name" link-view="#main-view" link-close-panel></f7-list-item>
               <!-- <f7-list-item link="/form/" title="Form" link-view="#main-view" link-close-panel></f7-list-item> -->
             </f7-list>
           </f7-page>
@@ -158,6 +158,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: 'app',
   data () {
@@ -166,7 +167,13 @@ export default {
         {id: 1, name: 'about', link: "/about/"},
         {id: 2, name: 'form', link: "/form/"},
       ]
+
     }
+  },
+  computed: {
+    ...mapGetters([
+      'getCatalogs'
+    ])
   }
 }
 </script>
