@@ -3,6 +3,7 @@ const state = {
   catalogs: [
     {id: 1, name: 'about', link: "/about/"},
     {id: 2, name: 'form', link: "/form/"},
+    {id: 3, name: 'signin', link: "/signin/"},
   ]
 }
 const mutations = {

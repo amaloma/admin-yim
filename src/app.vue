@@ -77,6 +77,7 @@
             <f7-block-title>Welcome to my App</f7-block-title>
             <f7-block inner>
               <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
+              <p>{{currentUser}}</p>
             </f7-block>
             <f7-block-title>Navigation</f7-block-title>
             <f7-list>
@@ -185,7 +186,8 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'getCatalogs'
+      'getCatalogs',
+      'currentUser'
     ])
   },
   methods: {
@@ -195,23 +197,23 @@ export default {
     ])
   },
   created () {
-    console.log('created ()');
-    fireauth.signInWithEmailAndPassword('air-lidon@hotmail.com', '123456')
-      .then(function(firebaseUser) {
-        console.log('firebaseUser',firebaseUser);
-      })
-      .catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // [START_EXCLUDE]
-        if (errorCode === 'auth/wrong-password') {
-          alert('Wrong password.');
-        } else {
-          alert(errorMessage);
-        }
-        console.log(error);
-      });
+    console.log('created ()', ...mapGetters(['currentUser']) );
+    // fireauth.signInWithEmailAndPassword('air-lidon@hotmail.com', '123456')
+    //   .then(function(firebaseUser) {
+    //     console.log('firebaseUser',firebaseUser);
+    //   })
+    //   .catch(function(error) {
+    //     // Handle Errors here.
+    //     var errorCode = error.code;
+    //     var errorMessage = error.message;
+    //     // [START_EXCLUDE]
+    //     if (errorCode === 'auth/wrong-password') {
+    //       alert('Wrong password.');
+    //     } else {
+    //       alert(errorMessage);
+    //     }
+    //     console.log(error);
+    //   });
   },
 }
 </script>
