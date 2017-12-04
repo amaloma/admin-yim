@@ -1,11 +1,12 @@
 import { fireauth } from '../firebase/'
 
 const state = {
-  currentUser: null,
+  currentUser: localStorage.getItem("currentUser"),
 }
 const mutations = {
   setUser (state, payload) {
     state.currentUser = payload
+    localStorage.setItem("currentUser", JSON.stringify(payload));
   },
 }
 const actions = {
@@ -19,7 +20,7 @@ const actions = {
           email: user.email,
           photoUrl: user.photoURL
         }
-        console.log('currentUser', newUser);
+        console.log('currentUser', newUser);        
         commit('setUser', newUser)
       }
     )

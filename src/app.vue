@@ -140,7 +140,7 @@
     </f7-popup> -->
 
     <!-- Login Screen -->
-    <!-- <f7-login-screen id="login-screen">
+    <f7-login-screen id="login-screen">
       <f7-view>
         <f7-pages>
           <f7-page login-screen>
@@ -163,8 +163,8 @@
             </f7-list>
           </f7-page>
         </f7-pages>
-      </f7-view>
-    </f7-login-screen> -->
+      </f7-view> 
+    </f7-login-screen>
 
   </div>
 </template>
@@ -197,7 +197,14 @@ export default {
     ])
   },
   created () {
-    console.log('created ()', ...mapGetters(['currentUser']) );
+    if (typeof(Storage) !== "undefined") {
+      console.log('Code for localStorage/sessionStorage. ')
+    } else {
+      console.log('Sorry! No Web Storage support..')
+    }
+    let localUser = localStorage.getItem("currentUser");
+    console.log('created () =>', ...mapGetters(['currentUser']) )
+    console.log('created 2 =>', localUser)
     // fireauth.signInWithEmailAndPassword('air-lidon@hotmail.com', '123456')
     //   .then(function(firebaseUser) {
     //     console.log('firebaseUser',firebaseUser);
